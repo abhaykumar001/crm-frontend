@@ -77,8 +77,8 @@ export default function ActivityLogsPage() {
 
       if (response.success) {
         setLogs(response.data || []);
-        // Assuming backend returns total count, otherwise set reasonable default
-        const total = response.total || response.data?.length || 0;
+        // Get total from pagination or fallback to data length
+        const total = response.pagination?.total || response.data?.length || 0;
         setTotalPages(Math.ceil(total / limit) || 1);
       } else {
         throw new Error(response.message || 'Failed to load logs');
