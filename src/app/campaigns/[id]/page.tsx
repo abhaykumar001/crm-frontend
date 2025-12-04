@@ -183,13 +183,13 @@ export default function CampaignDetailsPage() {
       case 1:
         return <Badge variant="success">Active</Badge>;
       case 0:
-        return <Badge variant="secondary">Inactive</Badge>;
+        return <Badge variant="default">Inactive</Badge>;
       case 2:
         return <Badge variant="warning">Paused</Badge>;
       case 3:
         return <Badge variant="danger">Completed</Badge>;
       default:
-        return <Badge variant="secondary">Unknown</Badge>;
+        return <Badge variant="default">Unknown</Badge>;
     }
   };
 

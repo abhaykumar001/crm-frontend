@@ -123,7 +123,7 @@ export default function SourcesPage() {
     if (type === 'Campaign') {
       return <Badge variant="primary">Campaign</Badge>;
     }
-    return <Badge variant="secondary">Normal</Badge>;
+    return <Badge variant="default">Normal</Badge>;
   };
 
   return (
