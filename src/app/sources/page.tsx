@@ -128,8 +128,7 @@ export default function SourcesPage() {
 
   return (
     <DashboardLayout
-      title="Sources"
-      subtitle="Manage lead sources and agent pools"
+      title="Lead Sources"
       actions={
         <div className="flex items-center space-x-3">
           <Button
@@ -282,7 +281,7 @@ export default function SourcesPage() {
                 </div>
                 <div className="flex flex-col items-end space-y-1">
                   {getTypeBadge(source.type)}
-                  <Badge variant={source.isActive ? 'success' : 'secondary'}>
+                  <Badge variant={source.isActive ? 'success' : 'default'}>
                     {source.isActive ? 'Active' : 'Inactive'}
                   </Badge>
                 </div>

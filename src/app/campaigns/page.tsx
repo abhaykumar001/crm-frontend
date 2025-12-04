@@ -122,7 +122,6 @@ export default function CampaignsPage() {
   return (
     <DashboardLayout
       title="Campaigns"
-      subtitle="Manage marketing campaigns and track performance"
       actions={
         <div className="flex items-center space-x-3">
           <Button

@@ -209,7 +209,7 @@ export default function CampaignDetailsPage() {
 
   if (loading) {
     return (
-      <DashboardLayout title="Campaign Details" subtitle="Loading...">
+      <DashboardLayout title="Campaign Details">
         <div className="text-center py-12">
           <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
           <p className="mt-2 text-gray-600">Loading campaign details...</p>
@@ -220,7 +220,7 @@ export default function CampaignDetailsPage() {
 
   if (error || !campaign) {
     return (
-      <DashboardLayout title="Campaign Details" subtitle="Error">
+      <DashboardLayout title="Campaign Details">
         <Card className="border-red-200 bg-red-50">
           <div className="flex items-center space-x-2 text-red-800">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -236,7 +236,6 @@ export default function CampaignDetailsPage() {
   return (
     <DashboardLayout
       title={campaign.name}
-      subtitle={campaign.secondaryName || 'Campaign Details'}
       actions={
         <div className="flex items-center space-x-3">
           <Link href="/campaigns">

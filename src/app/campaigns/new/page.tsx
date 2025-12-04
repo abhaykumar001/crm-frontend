@@ -176,7 +176,6 @@ export default function CampaignFormPage() {
     return (
       <DashboardLayout
         title={isEditMode ? 'Edit Campaign' : 'Create Campaign'}
-        subtitle="Loading..."
       >
         <div className="text-center py-12">
           <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
@@ -189,7 +188,6 @@ export default function CampaignFormPage() {
   return (
     <DashboardLayout
       title={isEditMode ? 'Edit Campaign' : 'Create Campaign'}
-      subtitle={isEditMode ? 'Update campaign details' : 'Create a new marketing campaign'}
       actions={
         <Link href="/campaigns">
           <Button variant="secondary" leftIcon={<ArrowLeftIcon className="w-4 h-4" />}>

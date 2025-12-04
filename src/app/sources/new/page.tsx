@@ -173,7 +173,6 @@ export default function SourceFormPage() {
     return (
       <DashboardLayout
         title={isEditMode ? 'Edit Source' : 'Create Source'}
-        subtitle="Loading..."
       >
         <div className="text-center py-12">
           <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
@@ -186,7 +185,6 @@ export default function SourceFormPage() {
   return (
     <DashboardLayout
       title={isEditMode ? 'Edit Source' : 'Create Source'}
-      subtitle={isEditMode ? 'Update source configuration' : 'Create a new lead source'}
       actions={
         <Link href="/sources">
           <Button variant="secondary" leftIcon={<ArrowLeftIcon className="w-4 h-4" />}>

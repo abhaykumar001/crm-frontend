@@ -241,7 +241,7 @@ export default function SourceDetailsPage() {
 
   if (loading) {
     return (
-      <DashboardLayout title="Source Details" subtitle="Loading...">
+      <DashboardLayout title="Source Details">
         <div className="text-center py-12">
           <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
           <p className="mt-2 text-gray-600">Loading source details...</p>
@@ -252,7 +252,7 @@ export default function SourceDetailsPage() {
 
   if (error || !source) {
     return (
-      <DashboardLayout title="Source Details" subtitle="Error">
+      <DashboardLayout title="Source Details">
         <Card className="border-red-200 bg-red-50">
           <div className="flex items-center space-x-2 text-red-800">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -270,7 +270,6 @@ export default function SourceDetailsPage() {
   return (
     <DashboardLayout
       title={source.name}
-      subtitle="Source Details & Agent Pool Management"
       actions={
         <div className="flex items-center space-x-3">
           <Link href="/sources">
@@ -301,10 +300,10 @@ export default function SourceDetailsPage() {
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-xl font-semibold text-gray-900">Source Information</h2>
               <div className="flex items-center space-x-2">
-                <Badge variant={source.isActive ? 'success' : 'secondary'}>
+                <Badge variant={source.isActive ? 'success' : 'default'}>
                   {source.isActive ? 'Active' : 'Inactive'}
                 </Badge>
-                <Badge variant={source.type === 'Campaign' ? 'primary' : 'secondary'}>
+                <Badge variant={source.type === 'Campaign' ? 'primary' : 'default'}>
                   {source.type || 'Normal'}
                 </Badge>
               </div>
@@ -447,7 +446,7 @@ export default function SourceDetailsPage() {
                           <Badge
                             variant={
                               agent.user.availability === 'Available' ? 'success' :
-                              agent.user.availability === 'Busy' ? 'warning' : 'secondary'
+                              agent.user.availability === 'Busy' ? 'warning' : 'default'
                             }
                             size="sm"
                           >
@@ -496,7 +495,7 @@ export default function SourceDetailsPage() {
                   >
                     <div className="flex items-center space-x-2">
                       <span className="font-medium text-gray-900">{subSource.name}</span>
-                      <Badge variant={subSource.isActive ? 'success' : 'secondary'} size="sm">
+                      <Badge variant={subSource.isActive ? 'success' : 'default'} size="sm">
                         {subSource.isActive ? 'Active' : 'Inactive'}
                       </Badge>
                     </div>
